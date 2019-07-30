@@ -1,10 +1,12 @@
-#include <iostream>
-
+#ifndef __STACK_H__
+#define __STACK_H__
+namespace stack
+{
 template <class t>
 class stack
 {
     private:
-    t container[10];
+    t container[10]; 
     int stack_pointer = -1;
     public:
     bool empty()
@@ -30,17 +32,5 @@ class stack
         ++stack_pointer;
     }
 };
-
-int main()
-{
-    stack<std::string> mit;
-    mit.push("poojary");
-    mit.push("kiran");
-    mit.push("mithil");
- 
-    while(!mit.empty())
-    {
-        std::cout << mit.top() << std::endl;
-        mit.pop();
-    }
 }
+#endif
